@@ -1,0 +1,5 @@
+1. get the input for a number.
+2. if the input is greater than 8 
+       it should prompt again
+3. else if the input is lower than 1 then
+       it should prompt again 
