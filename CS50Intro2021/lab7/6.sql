@@ -1,0 +1,1 @@
+Select name from songs where id in (select id from artist where name = "Post Malone");

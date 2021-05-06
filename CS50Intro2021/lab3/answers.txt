@@ -1,0 +1,13 @@
+sort1 uses: Bubble Sort
+
+How do you know?: Bubble sort looks at 2 items at a time which would take the most amount of time of all 3 sorts and while running the program on different files,
+it resulted to have the most running time of the 3 others.
+
+sort2 uses: Merge Sort
+
+How do you know?: Merge sorts takes two halfs and sorts both first and then merges them, resulting to have the most efficient. sort2 had the lowest running time of all the programs.
+
+sort3 uses: Selection Sort
+
+How do you know?: Selection sort looks for the lowest number in the iteriation and puts them in the correct position proving to be a bit more efficient.
+Sort3 was in between the running times of both sort1 and sort2 programs.

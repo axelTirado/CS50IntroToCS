@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+
+        <script>
+
+            // TODO: Add code to check answers to question.
+
+            document.addEventListener("DOMContentLoaded", function(){
+
+                let correct = document.querySelector(".Correct");
+                correct.addEventListener("click", function() {
+                    correct.style.backgroundColor = "green";
+                    document.querySelector("#lblCorrect").innerHTML = "Correct!";
+                });
+
+                let incorrect = document.querySelectorAll(".Incorrect");
+                for (let i = 0; i < incorrect.length; i++) {
+                    incorrect[i].addEventListener("click", function() {
+                        incorrect[i].style.backgroundColor = "red";
+                        document.querySelector("#lblCorrect").innerHTML = "Incorrect!";
+                    });
+                }
+
+                let submitButton = document.querySelector("#btnSubmit").addEventListener("click", function() {
+                    let Answer = document.querySelector("#answer");
+
+                    if (Answer.value === "Iraq") {
+                        Answer.style.backgroundColor = "green";
+                        document.querySelector("#lblanswer").innerHTML = "Correct!";
+                    }
+                    else {
+                        Answer.style.backgroundColor = "red";
+                        document.querySelector("#lblanswer").innerHTML = "Incorrect!";
+                    }
+                });
+            });
+
+
+
+        </script>
+
+    </head>
+    <body>
+
+        <div class="jumbotron">
+            <h1>Trivia!</h1>
+        </div>
+
+        <div class="container">
+
+            <div class="section">
+                <h2>Part 1: Multiple Choice </h2>
+                <hr>
+
+                <!-- TODO: Add multiple choice question here -->
+
+                     <h3> Where can you find the oldest ancient wonder of the world?</h3>
+
+                    <input type ="submit" value = "Ireland" class="Incorrect">
+                    <input type ="submit" value = "Egypt" class="Correct">
+                    <input type ="submit" value = "China" class="Incorrect">
+                    <input type ="submit" value = "South America" class="Incorrect">
+
+                    <p id=lblCorrect></p>
+
+
+
+            </div>
+
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+
+                <!-- TODO: Add free response question here -->
+                <h3> In which country is illegal to own a guinea pig?</h3>
+                <input type="text" width="20px" placeholder="Type answer here" id="answer">
+                <input type="submit" value="Answer" id="btnSubmit">
+
+                <p id="lblanswer"></p>
+
+            </div>
+
+        </div>
+    </body>
+</html>
